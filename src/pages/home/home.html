@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Super Special App!</h2>
+  <p>
+    The best app ever!
+  </p>
+  <p>
+    More text blabla bla <b>blabla</b>
+  </p>
+  <button ion-button round block (click)="sentToast()">Show a Toast!</button>
+  <p></p>
+  <ion-chip>
+    <ion-icon name="heart" color="dark"></ion-icon>
+    <ion-label>Yay swipe me with love!</ion-label>
+  </ion-chip>
+  <ion-card>
+    <ion-card-content>
+
+    <button ion-button icon-right (click)="openDeviceCamera()">
+      Take Picture <ion-icon name="camera"></ion-icon>
+    </button>
+
+    <img *ngIf="image"
+      [src]="domSanitizer.bypassSecurityTrustUrl(image)" />
+
+  </ion-card-content>
+</ion-card>
+<div [innerHTML]=newItem></div>
+</ion-content>
